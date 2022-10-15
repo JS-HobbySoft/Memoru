@@ -1,0 +1,42 @@
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory android:title="@string/messages_header">
+
+        <ListPreference
+            app:defaultValue="red"
+            app:entries="@array/textColorEntries"
+            app:entryValues="@array/textColorValues"
+            app:key="textColorKey"
+            app:title="@string/textColorText"
+            app:useSimpleSummaryProvider="true" />
+
+        <ListPreference
+            app:defaultValue="middle"
+            app:entries="@array/positionEntries"
+            app:entryValues="@array/positionValues"
+            app:key="positionKey"
+            app:title="@string/positionChoiceString"
+            app:useSimpleSummaryProvider="true" />
+
+        <EditTextPreference
+            android:defaultValue="1000"
+            android:key="textViewSizeKey"
+            android:title="@string/texBoxSizeString"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:maxLines="1"
+            app:useSimpleSummaryProvider="true"/>
+
+        <ListPreference
+            app:defaultValue="center_inside"
+            app:entries="@array/scaleTypeEntries"
+            app:entryValues="@array/scaleTypeValues"
+            app:key="scaleTypeKey"
+            app:title="@string/imageScaleTypeString"
+            app:useSimpleSummaryProvider="true" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

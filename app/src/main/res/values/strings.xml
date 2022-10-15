@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">Memoru</string>
+    <string name="title_activity_settings">SettingsActivity</string>
+
+    <!-- Preference Titles -->
+    <string name="messages_header">Date settings</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="instructions_for_date">Enter a date and time string\n(e.g. mm/dd/yyyy hh:mm:ss)</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+    <string name="settings_menu_name">Settings</string>
+    <string name="background_semitransparent">background_semitransparent</string>
+    <string name="viewString">viewStringText</string>
+    <string name="text_date_default">01/25/2022 10:56:00</string>
+    <string name="toastBadDate">"Invalid date format string"</string>
+    <string name="load_picture">Load Picture</string>
+    <string name="textColorText">Choose text color</string>
+    <string name="since_date">since %s</string>
+    <string name="until_date">until %s</string>
+    <string name="since_start_date_placeholder">since start date</string>
+    <string name="imageScaleTypeString">Choose image scale type</string>
+    <string name="positionChoiceString">Choose text position</string>
+    <string name="texBoxSizeString">Set text box size</string>
+    <string name="buttonChooseDateLabel">Choose date</string>
+    <string name="buttonChooseTimeLabel">Choose time</string>
+    <!--    <string name="background_uri_key">image_uri</string>-->
+</resources>

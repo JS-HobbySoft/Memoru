@@ -1,0 +1,47 @@
+<resources>
+
+    <string-array name="textColorEntries">
+        <item>Red</item>
+        <item>Green</item>
+        <item>Blue</item>
+        <item>Black</item>
+    </string-array>
+
+    <string-array name="textColorValues">
+        <item>red</item>
+        <item>green</item>
+        <item>blue</item>
+        <item>black</item>
+    </string-array>
+
+    <string-array name="scaleTypeEntries">
+        <item>Center</item>
+        <item>Center crop</item>
+        <item>Center inside</item>
+        <item>Fit center</item>
+        <item>Fit end</item>
+        <item>Fit start</item>
+    </string-array>
+
+    <string-array name="scaleTypeValues">
+        <item>center</item>
+        <item>center_crop</item>
+        <item>center_inside</item>
+        <item>fit_center</item>
+        <item>fit_end</item>
+        <item>fit_start</item>
+    </string-array>
+
+    <string-array name="positionEntries">
+        <item>Top</item>
+        <item>Middle</item>
+        <item>Bottom</item>
+    </string-array>
+
+    <string-array name="positionValues">
+        <item>top</item>
+        <item>middle</item>
+        <item>bottom</item>
+    </string-array>
+
+</resources>
