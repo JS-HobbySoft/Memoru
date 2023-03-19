@@ -31,5 +31,7 @@
     <string name="texBoxSizeString">Set text box size</string>
     <string name="buttonChooseDateLabel">Choose date</string>
     <string name="buttonChooseTimeLabel">Choose time</string>
+    <string name="widgetTextColor">Choose widget text color</string>
+    <string name="refresh_button">refresh button</string>
     <!--    <string name="background_uri_key">image_uri</string>-->
 </resources>

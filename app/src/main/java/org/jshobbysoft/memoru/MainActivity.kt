@@ -159,6 +159,7 @@ class MainActivity : AppCompatActivity() {
             "green" -> colorChangeTV(R.color.green)
             "blue" -> colorChangeTV(R.color.blue)
             "black" -> colorChangeTV(R.color.black)
+            "white" -> colorChangeTV(R.color.white)
             else -> println(colorOfText)
         }
 

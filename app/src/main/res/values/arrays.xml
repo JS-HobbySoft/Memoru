@@ -5,6 +5,7 @@
         <item>Green</item>
         <item>Blue</item>
         <item>Black</item>
+        <item>White</item>
     </string-array>
 
     <string-array name="textColorValues">
@@ -12,6 +13,7 @@
         <item>green</item>
         <item>blue</item>
         <item>black</item>
+        <item>white</item>
     </string-array>
 
     <string-array name="scaleTypeEntries">

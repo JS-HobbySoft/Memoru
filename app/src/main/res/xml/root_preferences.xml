@@ -37,6 +37,14 @@
             app:title="@string/imageScaleTypeString"
             app:useSimpleSummaryProvider="true" />
 
+        <ListPreference
+            app:defaultValue="black"
+            app:entries="@array/textColorEntries"
+            app:entryValues="@array/textColorValues"
+            app:key="widgetTextColorKey"
+            app:title="@string/widgetTextColor"
+            app:useSimpleSummaryProvider="true" />
+
     </PreferenceCategory>
 
 </PreferenceScreen>
