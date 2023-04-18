@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="buttonWidthValue">130dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="cardViewTextSize">15sp</dimen>
+    <dimen name="button_height">48dp</dimen>
 </resources>

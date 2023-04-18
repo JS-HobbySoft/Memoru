@@ -9,15 +9,11 @@ import android.app.DatePickerDialog
 import android.app.Dialog
 import android.os.Bundle
 import android.widget.DatePicker
+import androidx.core.os.bundleOf
 import java.util.*
 import androidx.fragment.app.DialogFragment
-import androidx.fragment.app.activityViewModels
 
 class DatePickerFragment : DialogFragment(), DatePickerDialog.OnDateSetListener {
-
-    // Using the activityViewModels() Kotlin property delegate from the
-    // fragment-ktx artifact to retrieve the ViewModel in the activity scope
-    private val viewModel: ItemViewModel by activityViewModels()
 
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
 //        return super.onCreateDialog(savedInstanceState)
@@ -35,6 +31,7 @@ class DatePickerFragment : DialogFragment(), DatePickerDialog.OnDateSetListener 
         // Do something with the date chosen by the user
         val gameDate = (month+1).toString().padStart(2,'0') + "/" +
                 day.toString().padStart(2,'0') + "/" + year.toString()
-        viewModel.setDate(gameDate)
+//        viewModel.setDate(gameDate)
+        parentFragmentManager.setFragmentResult("requestKeyDate", bundleOf("bundleKeyDate" to gameDate))
     }
 }

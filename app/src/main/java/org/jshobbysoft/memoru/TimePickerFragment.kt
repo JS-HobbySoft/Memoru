@@ -9,15 +9,11 @@ import android.app.Dialog
 import android.app.TimePickerDialog
 import android.os.Bundle
 import android.widget.TimePicker
+import androidx.core.os.bundleOf
 import androidx.fragment.app.DialogFragment
-import androidx.fragment.app.activityViewModels
 import java.util.*
 
 class TimePickerFragment : DialogFragment(), TimePickerDialog.OnTimeSetListener {
-
-    // Using the activityViewModels() Kotlin property delegate from the
-    // fragment-ktx artifact to retrieve the ViewModel in the activity scope
-    private val viewModel: ItemViewModel by activityViewModels()
 
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
         // Use the current time as the default values for the picker
@@ -33,6 +29,6 @@ class TimePickerFragment : DialogFragment(), TimePickerDialog.OnTimeSetListener 
         // Do something with the time chosen by the user
         val gameTime = hourOfDay.toString().padStart(2,'0') + ":" +
                 minute.toString().padStart(2,'0') + ":00"
-        viewModel.setTime(gameTime)
+        parentFragmentManager.setFragmentResult("requestKeyTime", bundleOf("bundleKeyTime" to gameTime))
     }
 }

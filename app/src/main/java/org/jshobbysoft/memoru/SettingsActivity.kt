@@ -24,29 +24,31 @@ class SettingsActivity : AppCompatActivity() {
                 .replace(R.id.settings, SettingsFragment())
                 .commit()
         }
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.show()
     }
 
     class SettingsFragment : PreferenceFragmentCompat() {
         override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
             setPreferencesFromResource(R.xml.root_preferences, rootKey)
-            val pref1 : EditTextPreference? = findPreference("beginning_date_time")
-            pref1?.onPreferenceChangeListener =
-                Preference.OnPreferenceChangeListener { _, newValue ->
-                    val newDateString = newValue?.toString()
-                    val re = Regex("[01][0-9]/[0-3][0-9]/[12][09][0-9][0-9] [0-2][0-9]:[0-5][0-9]:[0-9][0-9]")
-                    val result = newDateString?.matches(re)
-                    if (result == true) {
-                        true
-                    } else {
-                        Toast.makeText(requireActivity(), R.string.toastBadDate,Toast.LENGTH_LONG).show()
-                        false
-                    }
-                }
+
+            // Require a numeric input for the text size
             val pref2 : EditTextPreference? = findPreference("textViewSizeKey")
             pref2?.setOnBindEditTextListener {
                     editText -> editText.inputType = InputType.TYPE_CLASS_NUMBER
             }
+
+            // Limit the length of the description
+            val pref3 : EditTextPreference? = findPreference("textDescKey")
+            pref3?.onPreferenceChangeListener =
+                Preference.OnPreferenceChangeListener { _, newValue ->
+                    val newDescString = newValue?.toString()
+                    if (newDescString!!.length <= 30) {
+                        true
+                    } else {
+                        Toast.makeText(requireActivity(),R.string.toastBadDesc, Toast.LENGTH_LONG).show()
+                        false
+                    }
+                }
         }
     }
 }

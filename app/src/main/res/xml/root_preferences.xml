@@ -45,6 +45,22 @@
             app:title="@string/widgetTextColor"
             app:useSimpleSummaryProvider="true" />
 
+        <EditTextPreference
+            android:defaultValue="Change this text in the Settings menu"
+            android:key="textDescKey"
+            android:title="@string/textDescTitle"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:maxLines="1"
+            app:useSimpleSummaryProvider="true"/>
+
+        <CheckBoxPreference
+            android:title="Use this memorial for the widget"
+            android:key="widgetUseKey"
+            android:defaultValue="false"
+            android:summaryOn="Enabled in widget (only one memorial can be shown)"
+            android:summaryOff="Disabled in widget"/>
+
     </PreferenceCategory>
 
 </PreferenceScreen>
